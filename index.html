@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plants 🪴</title>
+    <style>
+      body {
+        text-align: center;
+        color: #2f4f4f;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      h1 {
+        text-align: center;
+        height: 50px;
+        color: #2f4f4f;
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      h2 {
+        text-align: center;
+        color: #556b2e;
+        background-color: rgba(255, 225, 225, 0.5);
+        border: 7px double #2f4f4f;
+        padding: 10px;
+        font-size: 22px;
+        font-style: oblique;
+        font-weight: 300;
+        border-radius: 4px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      img {
+        display: block;
+        margin: 25px auto;
+        max-width: 80%;
+        border-radius: 10px;
+        border: 1px solid #2f4f4f;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 14px;
+        margin: 20px 0 10px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      div {
+        text-align: center;
+        margin-top: 10px;
+        color: #2f4f4f;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        background: #556b2e;
+        color: #ffe1e1;
+        font-size: 18px;
+        padding: 15px 20px;
+        border: 1px solid #2f4f4f;
+        border-radius: 30px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 20px auto;
+        border-radius: 15px;
+        border: 1px solid #556b2e;
+        padding: 30px 70px;
+        background: rgb(255, 225, 225);
+        background: linear-gradient(
+          90deg,
+          rgba(255, 225, 225, 0.3) 7%,
+          rgba(144, 161, 125, 0.3) 100%,
+          rgba(130, 148, 96, 0.3) 100%
+        );
+      }
+
+      .learn-more {
+        text-align: center;
+        margin-top: 10px;
+        color: #556b2e;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>House of Plants</h1>
+      <h2>Charming Succulents</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/059/154/original/jessica-lewis-NxuHM65nOdE-unsplash.jpg?1671198727"
+        alt="Clay vase with 3 different succulent plants, white wooden background"
+      />
+      <p>
+        In botany, <strong>succulent plants</strong>, also known as succulents,
+        are plants with parts that are thickened, fleshy, and engorged, usually
+        to retain water in arid climates or soil conditions. The word succulent
+        comes from the Latin word sucus, meaning "juice" or "sap". <br />
+        Succulent plants may store water in various structures, such as leaves
+        and stems. The water content of some succulent organs can get up to
+        90-95%, such as Glottiphyllum semicyllindricum and Mesembryanthemum
+        barkleyii. Some definitions also include roots, thus geophytes that
+        survive unfavorable periods by dying back to underground storage organs
+        may be regarded as succulents. <br />
+        The habitats of these water-preserving plants are often in areas with
+        high temperatures and low rainfall, such as <em>deserts</em>, but
+        succulents may be found even in alpine ecosystems growing in
+        <em>rocky soil</em>. Succulents are characterized by their
+        <strong><em>ability to thrive on limited water sources</em></strong
+        >, such as mist and dew, which makes them equipped to survive in an
+        ecosystem that contains scarce water sources. <br />
+      </p>
+      <div>Learn more on</div>
+      <span>👉🏻</span>
+      <a
+        href="https://en.wikipedia.org/wiki/Succulent_plant"
+        target="_blank"
+        class="learn-more"
+      >
+        <span class="learn-more"> Wikipedia</span>
+      </a>
+      <span>👉🏻</span>
+      <a
+        href="https://www.instagram.com/youplantamsterdam/"
+        target="_blank"
+        class="learn-more"
+      >
+        <span> Instagram </span>
+      </a>
+      <button class="buy-button">Buy Succulent</button>
+      <hr />
+      <p class="footer">This page was built by Francesca Lalli</p>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        if (name === "") {
+          alert("Hello Plant Lover!");
+        } else {
+          alert("Welcome " + name);
+        }
+        let question = prompt("Are you a plant lover?");
+        question = question.toLocaleLowerCase();
+        question = question.trim();
+        question = question.replace("of course", "yes");
+        if (question === "yes") {
+          alert("Expand your family 🪴🪴🪴 Buy a new Succulent!");
+        } else {
+          alert(
+            "It's never too late to start sharing some ❤️. Buy your first Succulent!"
+          );
+        }
+      }
+
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
